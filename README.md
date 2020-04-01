@@ -2,9 +2,11 @@
 ~~~
 mkdir build-ve
 cd build-ve
-nc++ -O4 -I ./../include/ ../src/main.cpp -o integral1
+nc++ -O4 -I ./../include/ ../src/main.cpp -o integral
 ./integral 1 3000 4000
 ~~~
+
+
 terminal
 ~~~
 -bash-4.2$ ./integral 1 3000 4000

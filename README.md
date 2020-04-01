@@ -15,13 +15,13 @@ integral: time = 1.827000 ms, 6.568144 GE/s
 
 # Function
 ~~~
-template <class Tin, class Tout> void integral_ve(Tin* in, Tout* out, int width, int height)
+template <class Tin, class Tout> void integral_ve(Tin* in, Tout* out, Tout* buf, int width, int height)
 ~~~
 
 # example
 
 ~~~
-integral_ve<float,float>(in,out,width,height);
+integral_ve<float,float>(in,out,buf,width,height);
 ~~~
 
 # argument
@@ -29,6 +29,7 @@ integral_ve<float,float>(in,out,width,height);
  - Tout：type of output data（int,float,double,…）
  - in：pointer of input data
  - out：pointer of output data（ you need to allocate memory. ）
+ - buf：pointer of temporary buffer（ you need to allocate memory. temporary buffer and output data are same size.）
  - width：width of image
  - height：height of image
 

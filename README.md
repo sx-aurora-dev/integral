@@ -1,3 +1,5 @@
+ # Function
+
 template <class Tin, class Tout> void integral_ve(Tin* in, Tout* out, int width, int height)
 
 example：integral_ve<float,float>(in,out,width,height);
@@ -9,3 +11,6 @@ in：pointer of input data
 out：pointer of output data（ you need to allocate memory. ）
 Width：width of image
 height：height of image
+
+
+

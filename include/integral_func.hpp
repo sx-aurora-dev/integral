@@ -1,17 +1,11 @@
 template <class Tin, class Tout>
-void integral_ve(Tin* in, Tout* out, int width, int height)
+void integral_ve(Tin* in, Tout* out, Tout* buf, int width, int height)
 {
 
     const Tin* psrc = in;
     Tout *pdst = out;
+    Tout *ptmp = buf;
 
-
-    static Tout *ptmp;
-    static int flag=1;
-    if(flag){
-        ptmp = new Tout [height * width];
-        flag=0;
-    }
 
     for(int y0 = 0; y0 < height; y0+=256) {
         Tout work1[256];
